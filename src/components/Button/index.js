@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './styles.scss';
+
 export default function Button({className, children, handleClick}) {
   return (
     <button className={className} type="button" onClick={handleClick}>
@@ -16,7 +18,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  className: '',
-  children: 'Click me',
+  className: 'button',
+  children: 'See more',
   handleClick: () => console.log('clicked'),
 };
