@@ -1,0 +1,27 @@
+.movie-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  max-width: 1300px;
+  justify-self: center;
+
+  li {
+    flex-basis: 20%;
+    -ms-flex: auto;
+    position: relative;
+    padding: 10px;
+
+    @media (max-width: 1333px) {
+      flex-basis: 33.33%;
+    }
+    @media (max-width: 1073px) {
+      flex-basis: 33.33%;
+    }
+    @media (max-width: 815px) {
+      flex-basis: 50%;
+    }
+    @media (max-width: 555px) {
+      flex-basis: 100%;
+    }
+  }
+}
