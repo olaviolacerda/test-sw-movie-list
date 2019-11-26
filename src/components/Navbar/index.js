@@ -6,8 +6,8 @@ import logo from '../../assets/images/logo.png';
 
 export default function Navbar() {
   return (
-    <navbar>
+    <nav>
       <img src={logo} alt="Star Wars Logo" />
-    </navbar>
+    </nav>
   );
 }
