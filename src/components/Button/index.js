@@ -20,5 +20,5 @@ Button.propTypes = {
 Button.defaultProps = {
   className: 'button',
   children: 'See more',
-  handleClick: () => console.log('clicked'),
+  handleClick: () => {},
 };

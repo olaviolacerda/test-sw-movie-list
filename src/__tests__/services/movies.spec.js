@@ -1,5 +1,5 @@
 import mockAxios from 'axios';
-import getMovies from '../../services/movies';
+import {getMovies} from '../../services/movies';
 
 jest.mock('axios');
 
