@@ -10,4 +10,14 @@ const getMovies = async () => {
   }
 };
 
-export default getMovies;
+const getMovieDetails = async movieId => {
+  try {
+    const {data} = await api.get(`films/${movieId}/`);
+
+    return data;
+  } catch (error) {
+    return error;
+  }
+};
+
+export {getMovies, getMovieDetails};
