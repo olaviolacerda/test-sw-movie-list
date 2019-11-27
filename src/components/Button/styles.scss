@@ -5,12 +5,16 @@
   border: 0;
   border-radius: 50px;
   border-color: #016cf9;
-  text-transform: uppercase;
-  color: #fff;
-  font-weight: 500;
   align-self: center;
   cursor: pointer;
   margin-top: 10px;
   position: absolute;
   bottom: 20px;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
 }
