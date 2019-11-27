@@ -3,7 +3,8 @@
   flex-flow: row wrap;
   justify-content: flex-start;
   max-width: 1300px;
-  justify-self: center;
+  justify-content: center;
+  align-self: center;
 
   li {
     flex-basis: 20%;
