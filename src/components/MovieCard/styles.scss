@@ -11,7 +11,7 @@
   width: 100%;
 
   &:hover {
-    box-shadow: 0 0 5px 1px #edec51;
+    box-shadow: 0 0 5px 1px #4bd5ee;
     border: 1px solid #fff;
   }
 
@@ -24,5 +24,12 @@
   .date {
     font-weight: bold;
     color: #514f4f;
+  }
+
+  a {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
   }
 }

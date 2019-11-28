@@ -1,6 +1,6 @@
 footer {
   display: flex;
-  min-height: 100px;
+  min-height: 70px;
   justify-content: center;
   width: 100%;
   color: #4bc0ee;
@@ -10,6 +10,7 @@ footer {
   bottom: 0;
   align-items: center;
   background-image: url('../../assets/images/navbar.jpg');
+  border-top: 1px solid;
 
   &:before {
     background: linear-gradient(

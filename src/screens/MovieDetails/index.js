@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import ReactLoading from 'react-loading';
 
 import './styles.scss';
 
@@ -7,6 +8,7 @@ import MovieDescription from '../../components/MovieDescription';
 
 export default function MovieDetails({match}) {
   const [movie, setMovie] = useState();
+  const [loading, setLoading] = useState(true);
 
   const {movieId} = match.params;
 
@@ -15,14 +17,23 @@ export default function MovieDetails({match}) {
 
     if (!receivedMovie) {
       setMovie(`Couldn't get details about movie: ${receivedMovie.message}`);
+    } else {
+      setMovie(receivedMovie);
+      setLoading(false);
     }
-
-    setMovie(receivedMovie);
   }
 
   useEffect(() => {
     requestDetails();
   }, []);
 
-  return <>{movie && <MovieDescription movie={movie} />}</>;
+  return (
+    <>
+      {loading ? (
+        <ReactLoading className="loading" type="spinningBubbles" color="#edec51" />
+      ) : (
+        <MovieDescription movie={movie} />
+      )}
+    </>
+  );
 }
