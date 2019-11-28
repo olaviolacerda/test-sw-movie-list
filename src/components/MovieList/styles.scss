@@ -5,12 +5,13 @@
   max-width: 1300px;
   justify-content: center;
   align-self: center;
-  margin-top: 100px;
+  margin-top: 100px !important;
   li {
     flex-basis: 20%;
     -ms-flex: auto;
     position: relative;
     padding: 10px;
+    opacity: 0;
 
     @media (max-width: 1333px) {
       flex-basis: 33.33%;

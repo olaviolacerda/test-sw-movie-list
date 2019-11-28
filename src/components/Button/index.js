@@ -6,7 +6,7 @@ import './styles.scss';
 export default function Button({className, children, handleClick}) {
   return (
     <button className={className} type="button" onClick={handleClick}>
-      {children}
+      {children || null}
     </button>
   );
 }
@@ -19,6 +19,6 @@ Button.propTypes = {
 
 Button.defaultProps = {
   className: 'button',
-  children: 'See more',
   handleClick: () => {},
+  children: null,
 };
