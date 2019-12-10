@@ -1,6 +1,7 @@
 import React, {useRef, useEffect} from 'react';
 import {TimelineLite} from 'gsap';
 import {withRouter} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import './styles.scss';
 import Button from '../Button';
@@ -31,3 +32,19 @@ const MovieDescription = ({movie, history}) => {
 };
 
 export default withRouter(MovieDescription);
+
+MovieDescription.propTypes = {
+  movie: PropTypes.objectOf(PropTypes.string),
+  history: PropTypes.objectOf(PropTypes.object),
+};
+
+MovieDescription.defaultProps = {
+  movie: {
+    title: 'sample title',
+    opening_crawl: 'sample opening crawl',
+    episode_id: 'sample id',
+  },
+  history: {
+    goBack: () => {},
+  },
+};
