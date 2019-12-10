@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie Card component should render correctly 1`] = `
+<div
+  className="card"
+>
+  <h5
+    className="title"
+  />
+  <p
+    className="date"
+  />
+  <Link
+    className="button"
+    to="/movies/undefined/details"
+  >
+    Details
+  </Link>
+</div>
+`;
