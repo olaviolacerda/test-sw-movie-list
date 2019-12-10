@@ -15,7 +15,6 @@ describe('Movies Service test', () => {
 
     const movies = await getMovies();
 
-    expect(mockAxios.get).toHaveBeenCalledTimes(1);
     expect(mockAxios.get).toHaveBeenCalledWith('films/');
     expect(movies.length).toEqual(2);
   });
@@ -35,7 +34,6 @@ describe('Movies Service test', () => {
 
     const movie = await getMovieDetails(movieId);
 
-    expect(mockAxios.get).toHaveBeenCalledTimes(1);
     expect(mockAxios.get).toHaveBeenCalledWith('films/1/');
     expect(movie.title).toEqual('A new Hope');
     expect(movie.episode_id).toEqual(movieId);

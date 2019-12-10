@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import {motion, useAnimation} from 'framer-motion';
+import PropTypes from 'prop-types';
 import MovieCard from '../MovieCard';
 
 import './styles.scss';
@@ -24,3 +25,17 @@ export default function MovieList({movies}) {
     </motion.ul>
   );
 }
+
+MovieList.propTypes = {
+  movies: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
+};
+
+MovieList.defaultProps = {
+  movies: [
+    {
+      title: 'sample title',
+      release_date: 'sample date',
+      episode_id: 'sample id',
+    },
+  ],
+};
